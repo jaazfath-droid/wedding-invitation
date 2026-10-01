@@ -181,7 +181,7 @@ section {
   padding: 20px;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Creates parallax depth scrolling */
+  background-attachment: scroll; /* Creates parallax depth scrolling */
 }
 
 /* Photo 1 Background with dark overlay */
