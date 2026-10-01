@@ -26,6 +26,10 @@ section {
 /* All sections share the same background photo */
 .hero, .details, .rsvp {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 /* Glass Effect Card */
