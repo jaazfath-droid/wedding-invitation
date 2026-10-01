@@ -61,7 +61,7 @@ section {
 
 /* Photo 1 Background with dark overlay */
 .hero { 
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg1.jpg'); 
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg1.jpeg'); 
 }
 
 /* Photo 2 Background with dark overlay */
