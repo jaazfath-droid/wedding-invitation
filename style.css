@@ -61,16 +61,18 @@ section {
 
 /* Photo 1 Background with dark overlay */
 /* Photo 1 Background with dark overlay */
+/* Photo 1 Background with dark overlay */
 .hero { 
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg1.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bg1.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 /* Photo 2 Details Background */
 .details { 
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg1.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg1.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,7 +80,7 @@ section {
 
 /* Photo 3 RSVP Background */
 .rsvp { 
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg1.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg1.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
