@@ -8,7 +8,10 @@
 </head>
 <body>
 
-  <!-- COVER SCREEN / ENVELOPE OVERLAY -->
+  <!-- BACKGROUND MUSIC (Replace song.mp3 with your audio filename) -->
+  <audio id="bg-music" src="song.mp3" loop></audio>
+
+  <!-- COVER SCREEN OVERLAY -->
   <div id="cover" class="cover-overlay">
     <div class="cover-card">
       <p class="tagline">You Are Cordially Invited To The Wedding Of</p>
@@ -18,15 +21,18 @@
     </div>
   </div>
 
-  <!-- MAIN SCROLLING CONTENT -->
+  <!-- MAIN SCROLLING CONTENT (Hidden until button is clicked) -->
   <main id="main-content" class="hidden">
+
+    <!-- FLOATING MUSIC TOGGLE BUTTON -->
+    <button id="music-btn" class="floating-music-btn" onclick="toggleMusic()">🎵 Pause Song</button>
 
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="glass-box">
         <h2>Sarah & Alex</h2>
         <p>We are getting married!</p>
-        <span class="scroll-indicator">↓ Scroll down ↓</span>
+        <span class="scroll-indicator">↓ Scroll down to explore ↓</span>
       </div>
     </section>
 
