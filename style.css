@@ -10,6 +10,72 @@ body {
   color: #333;
 }
 
+/* Cover Screen Styling */
+.cover-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.cover-card {
+  text-align: center;
+}
+
+.invite-title {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cover-sub {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 15px 0 20px 0;
+}
+
+.open-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #8b5a2b;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(139, 90, 43, 0.4);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.open-btn:hover {
+  background-color: #6e4620;
+  transform: scale(1.05);
+}
+
+/* Main Content Visibility */
+.main-content {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* Section Backgrounds */
 section {
   min-height: 100vh;
   display: flex;
@@ -17,28 +83,23 @@ section {
   align-items: center;
   text-align: center;
   padding: 20px;
+}
+
+.hero, .details, .rsvp {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./bg1.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
 
-/* All sections share the same background photo */
-.hero, .details, .rsvp {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./bg1.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-/* Glass Effect Card */
+/* Glass Card */
 .glass-box {
   background: rgba(255, 255, 255, 0.88);
   padding: 40px 25px;
   border-radius: 18px;
   max-width: 480px;
-  width: 100%;
+  width: 90%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -83,14 +144,9 @@ h2 {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  transition: background 0.3s ease;
 }
 
-.rsvp-btn:hover {
-  background-color: #6e4620;
-}
-
-/* Music Toggle Button */
+/* Music Floating Button */
 .music-btn {
   position: fixed;
   top: 20px;
