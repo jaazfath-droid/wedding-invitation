@@ -8,45 +8,52 @@
 </head>
 <body>
 
-  <!-- Full-screen Cover Overlay -->
+  <!-- Cover Page Overlay -->
   <div id="coverPage" class="cover-page">
     <div class="glass-box cover-card">
-      <p class="invite-title">You Are Invited To The Wedding Of</p>
-      <h1>Sarah & Alex</h1>
-      <p class="cover-sub">Tap below to open the invitation</p>
+      <p class="invite-title">Your invitation is ready</p>
       <button id="openBtn" class="open-btn">Open Invitation</button>
     </div>
   </div>
 
-  <!-- Main Website Content -->
+  <!-- Main Website Content (3 Pages/Sections) -->
   <div id="mainContent" class="main-content hidden">
     
+    <!-- Audio Player & Floating Control Button -->
     <button id="musicToggle" class="music-btn" aria-label="Toggle Music">🎵</button>
     <audio id="bgMusic" loop preload="auto">
       <source src="music.mp3" type="audio/mpeg">
     </audio>
 
+    <!-- Page 1: Bride & Groom Names & Quote -->
     <section class="hero">
       <div class="glass-box">
         <h1>Sarah & Alex</h1>
-        <p class="subtitle">We are getting married!</p>
-        <p class="scroll-hint">↓ Scroll down to explore ↓</p>
+        <p class="quote">"Two Souls, One Journey"</p>
+        <p class="scroll-hint">↓ Scroll down ↓</p>
       </div>
     </section>
 
-    <section class="details">
+    <!-- Page 2: Countdown Timer -->
+    <section class="countdown-section">
       <div class="glass-box">
-        <h2>Event Details</h2>
+        <h2>Counting Down To Our Special Day</h2>
+        <div id="timer" class="timer-container">
+          <div class="time-box"><span id="days">00</span><p>Days</p></div>
+          <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+          <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
+          <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 3: Venue & Details -->
+    <section class="venue-section">
+      <div class="glass-box">
+        <h2>Wedding Venue & Details</h2>
         <p class="event-date">📅 Saturday, December 12, 2026</p>
         <p class="event-venue">📍 Grand Palace Venue, City Center</p>
         <p class="event-time">⏰ Reception: 6:00 PM Onwards</p>
-      </div>
-    </section>
-
-    <section class="rsvp">
-      <div class="glass-box">
-        <h2>Are You Attending?</h2>
-        <p>Please let us know if you can make it!</p>
         <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">RSVP Now</a>
       </div>
     </section>
