@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarah & Alex are Getting Married!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- COVER SCREEN / ENVELOPE OVERLAY -->
+  <div id="cover" class="cover-overlay">
+    <div class="cover-card">
+      <p class="tagline">You Are Cordially Invited To The Wedding Of</p>
+      <h1>Sarah & Alex</h1>
+      <p class="date-preview">October 24, 2026</p>
+      <button class="btn-main" onclick="openInvitation()">✉️ Open Invitation</button>
+    </div>
+  </div>
+
+  <!-- MAIN SCROLLING CONTENT -->
+  <main id="main-content" class="hidden">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="glass-box">
+        <h2>Sarah & Alex</h2>
+        <p>We are getting married!</p>
+        <span class="scroll-indicator">↓ Scroll down ↓</span>
+      </div>
+    </section>
+
+    <!-- DETAILS SECTION -->
+    <section class="details">
+      <div class="glass-box">
+        <h2>The Celebration</h2>
+        <p><strong>Date:</strong> October 24, 2026</p>
+        <p><strong>Time:</strong> 4:00 PM onwards</p>
+        <p><strong>Venue:</strong> Grand Palace Gardens, Bengaluru</p>
+        <a href="https://maps.google.com" target="_blank" class="btn-secondary">📍 View Location Map</a>
+      </div>
+    </section>
+
+    <!-- RSVP SECTION -->
+    <section class="rsvp">
+      <div class="glass-box">
+        <h2>RSVP</h2>
+        <p>Please let us know if you can make it by September 1, 2026!</p>
+        <a href="https://forms.google.com" target="_blank" class="btn-main">✉️ Click Here to RSVP</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
