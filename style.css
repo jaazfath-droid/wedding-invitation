@@ -10,12 +10,12 @@ body {
   color: #333;
 }
 
-/* Cover Screen Styling */
+/* Full-Screen Cover Page Overlay */
 .cover-page {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 9999;
   display: flex;
@@ -24,7 +24,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./bg1.jpeg');
   background-size: cover;
   background-position: center;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  transition: opacity 0.8s ease;
 }
 
 .cover-card {
@@ -32,7 +32,7 @@ body {
 }
 
 .invite-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #666;
@@ -64,18 +64,12 @@ body {
   transform: scale(1.05);
 }
 
-/* Main Content Visibility */
-.main-content {
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
+/* Hide Main Content Until Unlocked */
 .hidden {
-  display: none;
-  opacity: 0;
+  display: none !important;
 }
 
-/* Section Backgrounds */
+/* Section Layouts */
 section {
   min-height: 100vh;
   display: flex;
@@ -93,7 +87,7 @@ section {
   background-attachment: scroll;
 }
 
-/* Glass Card */
+/* Glass Effect Card */
 .glass-box {
   background: rgba(255, 255, 255, 0.88);
   padding: 40px 25px;
