@@ -8,39 +8,54 @@
 </head>
 <body>
 
-  <!-- Music Toggle Button -->
-  <button id="musicToggle" class="music-btn" aria-label="Toggle Music">🎵</button>
-  <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- Section 1: Hero Cover -->
-  <section class="hero">
-    <div class="glass-box">
+  <!-- Cover Page Overlay -->
+  <div id="coverPage" class="cover-page">
+    <div class="glass-box cover-card">
+      <p class="invite-title">You Are Invited To The Wedding Of</p>
       <h1>Sarah & Alex</h1>
-      <p class="subtitle">We are getting married!</p>
-      <p class="scroll-hint">↓ Scroll down to explore ↓</p>
+      <p class="cover-sub">Tap below to open the invitation</p>
+      <button id="openBtn" class="open-btn">✉️ Open Invitation</button>
     </div>
-  </section>
+  </div>
 
-  <!-- Section 2: Event Details -->
-  <section class="details">
-    <div class="glass-box">
-      <h2>Event Details</h2>
-      <p class="event-date">📅 Saturday, December 12, 2026</p>
-      <p class="event-venue">📍 Grand Palace Venue, City Center</p>
-      <p class="event-time">⏰ Reception: 6:00 PM Onwards</p>
-    </div>
-  </section>
+  <!-- Main Website Content (Hidden initially) -->
+  <div id="mainContent" class="main-content hidden">
+    
+    <!-- Music Toggle Button -->
+    <button id="musicToggle" class="music-btn" aria-label="Toggle Music">🎵</button>
+    <audio id="bgMusic" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
-  <!-- Section 3: RSVP -->
-  <section class="rsvp">
-    <div class="glass-box">
-      <h2>Are You Attending?</h2>
-      <p>Please let us know if you can make it!</p>
-      <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">✉️ RSVP Now</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="glass-box">
+        <h1>Sarah & Alex</h1>
+        <p class="subtitle">We are getting married!</p>
+        <p class="scroll-hint">↓ Scroll down to explore ↓</p>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details">
+      <div class="glass-box">
+        <h2>Event Details</h2>
+        <p class="event-date">📅 Saturday, December 12, 2026</p>
+        <p class="event-venue">📍 Grand Palace Venue, City Center</p>
+        <p class="event-time">⏰ Reception: 6:00 PM Onwards</p>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp">
+      <div class="glass-box">
+        <h2>Are You Attending?</h2>
+        <p>Please let us know if you can make it!</p>
+        <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">✉️ RSVP Now</a>
+      </div>
+    </section>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
