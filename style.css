@@ -60,20 +60,29 @@ section {
 }
 
 /* Photo 1 Background with dark overlay */
+/* Photo 1 Background with dark overlay */
 .hero { 
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg1.jpeg'); 
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Photo 2 Background with dark overlay */
+/* Photo 2 Details Background */
 .details { 
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg2.jpg'); 
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Photo 3 Background */
+/* Photo 3 RSVP Background */
 .rsvp { 
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg1_2.jpeg'); 
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 /* GLASS EFFECT CARD */
 .glass-box {
   background: rgba(255, 255, 255, 0.85);
