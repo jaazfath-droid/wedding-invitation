@@ -8,6 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #111;
   color: #333;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Cover Page Overlay */
@@ -21,9 +22,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./bg1.jpeg');
+  /* Soft contrast overlay to keep image vibrant and sharp */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('./bg1.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
   transition: opacity 0.8s ease;
 }
 
@@ -33,30 +38,32 @@ body {
 
 .invite-title {
   font-size: 1.1rem;
-  letter-spacing: 1px;
-  color: #555;
+  letter-spacing: 1.5px;
+  color: #444;
   margin-bottom: 20px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 /* Yellow Open Invitation Button */
 .open-btn {
   display: inline-block;
   padding: 14px 34px;
-  background-color: #f1c40f;
-  color: #2c3e50;
-  font-size: 1.1rem;
-  font-weight: bold;
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+  color: #1a252f;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(241, 196, 15, 0.5);
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 20px rgba(241, 196, 15, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .open-btn:hover {
-  background-color: #d4ac0d;
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(241, 196, 15, 0.6);
 }
 
 /* Hide Main Content Until Opened */
@@ -64,117 +71,141 @@ body {
   display: none !important;
 }
 
-/* 3 Main Sections Styling */
+/* Main Sections with Parallax Feel */
 section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .hero, .countdown-section, .venue-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./bg1.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./bg1.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed; /* Creates smooth dynamic scroll effect */
+  image-rendering: -webkit-optimize-contrast;
 }
 
-/* Glass Effect Container */
+/* Modern Glassmorphism Container */
 .glass-box {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 40px 25px;
-  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 45px 30px;
+  border-radius: 20px;
   max-width: 480px;
   width: 90%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   margin: 10px;
 }
 
 h1 {
-  font-size: 2.3rem;
-  color: #8b5a2b;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #6b4423;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 1.6rem;
-  color: #8b5a2b;
-  margin-bottom: 20px;
+  font-size: 1.7rem;
+  color: #6b4423;
+  margin-bottom: 22px;
 }
 
 .quote {
   font-size: 1.2rem;
   font-style: italic;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .scroll-hint {
-  font-size: 0.9rem;
-  color: #888;
+  font-size: 0.85rem;
+  color: #777;
+  letter-spacing: 1px;
 }
 
 /* Countdown Grid Styling */
 .timer-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .time-box {
-  background: rgba(139, 90, 43, 0.1);
-  padding: 12px 10px;
-  border-radius: 10px;
-  width: 70px;
+  background: rgba(107, 68, 35, 0.08);
+  padding: 14px 8px;
+  border-radius: 12px;
+  flex: 1;
+  border: 1px solid rgba(107, 68, 35, 0.15);
 }
 
 .time-box span {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #8b5a2b;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #6b4423;
   display: block;
 }
 
 .time-box p {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #666;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
 }
 
-/* Venue Details & Button */
+/* Venue Details & RSVP Button */
 .event-date, .event-venue, .event-time {
   font-size: 1.05rem;
-  margin: 12px 0;
-  color: #444;
+  margin: 14px 0;
+  color: #333;
+  font-weight: 500;
 }
 
 .rsvp-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 28px;
-  background-color: #8b5a2b;
+  margin-top: 22px;
+  padding: 14px 32px;
+  background-color: #6b4423;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(107, 68, 35, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Music Toggle Switch */
+.rsvp-btn:hover {
+  background-color: #523318;
+  transform: translateY(-2px);
+}
+
+/* Music Control Floating Button */
 .music-btn {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 999;
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  font-size: 1.4rem;
-  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-size: 1.3rem;
+  padding: 12px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
 }
