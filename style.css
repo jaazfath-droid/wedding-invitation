@@ -263,7 +263,7 @@ body {
   margin-top: 30px;
 }
 
-.map-btn, .rsvp-btn {
+.map-btn {
   display: block;
   padding: 14px 20px;
   border-radius: 30px;
@@ -272,27 +272,14 @@ body {
   font-size: 0.9rem;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-}
-
-.map-btn {
-  background-color: transparent;
-  color: var(--gold-primary);
-  border: 1px solid var(--gold-primary);
-}
-
-.map-btn:hover {
-  background-color: var(--gold-primary);
-  color: var(--maroon-dark);
-}
-
-.rsvp-btn {
   background: linear-gradient(135deg, var(--gold-primary), #aa7c11);
   color: #1a0306;
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
 
-.rsvp-btn:hover {
+.map-btn:hover {
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
 }
 
 .closing-text {
