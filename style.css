@@ -1,10 +1,11 @@
 :root {
-  --maroon-bg: #4a0e17;
-  --maroon-dark: #2d080e;
-  --gold-accent: #d4af37;
+  --maroon-dark: #2a050b;
+  --maroon-mid: #4a0e17;
+  --maroon-deep: #1c0307;
+  --gold-primary: #d4af37;
   --gold-light: #f3e5ab;
-  --text-light: #fffdfa;
-  --glass-bg: rgba(45, 8, 14, 0.75);
+  --text-white: #ffffff;
+  --glass-bg: rgba(35, 6, 12, 0.82);
   --glass-border: rgba(212, 175, 55, 0.35);
 }
 
@@ -20,13 +21,13 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--maroon-dark);
-  color: var(--text-light);
+  background-color: var(--maroon-deep);
+  color: var(--text-white);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-/* Cover Overlay with Rich Deep Maroon Radial Gradient */
+/* Cover Overlay - Pure Maroon Background Gradient */
 .cover-page {
   position: fixed;
   top: 0;
@@ -37,14 +38,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, var(--maroon-bg) 0%, var(--maroon-dark) 100%), url('./bg1.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
+  background: radial-gradient(circle, var(--maroon-mid) 0%, var(--maroon-dark) 60%, var(--maroon-deep) 100%);
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* Glass Card Styling */
+/* Glass Card Box */
 .glass-box {
   background: var(--glass-bg);
   padding: 45px 28px;
@@ -52,7 +50,7 @@ body {
   max-width: 520px;
   width: 90%;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   margin: 0 auto;
@@ -62,7 +60,7 @@ body {
 .bismillah {
   font-family: 'Amiri', serif;
   font-size: 1.6rem;
-  color: var(--gold-accent);
+  color: var(--gold-primary);
   margin-bottom: 12px;
 }
 
@@ -77,10 +75,10 @@ body {
 .cover-names, .couple-title, .signature-names {
   font-family: 'Great Vibes', cursive;
   font-size: 3.6rem;
-  color: var(--gold-accent);
+  color: var(--gold-primary);
   margin: 10px 0 15px;
   font-weight: 400;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .couple-title .amp {
@@ -99,7 +97,7 @@ body {
 .open-btn {
   display: inline-block;
   padding: 14px 38px;
-  background: linear-gradient(135deg, var(--gold-accent), #aa7c11);
+  background: linear-gradient(135deg, var(--gold-primary), #aa7c11);
   color: #1a0306;
   font-size: 1rem;
   font-weight: 700;
@@ -120,25 +118,21 @@ body {
   display: none !important;
 }
 
-/* Long Scroll Section Setup */
-section {
+/* Page Scroll Sections - Pure Maroon Background Gradient */
+.scroll-section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  background: radial-gradient(circle, var(--maroon-bg) 0%, var(--maroon-dark) 100%), url('./bg1.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: radial-gradient(circle, var(--maroon-mid) 0%, var(--maroon-dark) 60%, var(--maroon-deep) 100%);
   border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .section-title {
   font-family: 'Cinzel', serif;
-  font-size: 1.6rem;
-  color: var(--gold-accent);
+  font-size: 1.5rem;
+  color: var(--gold-primary);
   margin-bottom: 25px;
   letter-spacing: 1.5px;
 }
@@ -171,36 +165,35 @@ section {
   60% { transform: translateY(-4px); }
 }
 
-/* Couple Cards */
-.couple-details {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.person-card {
-  padding: 10px;
-}
-
+/* Person & Parents Info */
 .person-name {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.8rem;
-  color: var(--gold-accent);
+  font-size: 3.5rem;
+  color: var(--gold-primary);
+  margin: 10px 0;
 }
 
-.person-role {
-  font-size: 0.85rem;
-  color: #d0d0d0;
-  margin-top: 4px;
+.parents-block {
+  margin-top: 15px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 15px;
 }
 
-.divider-icon {
-  font-size: 1.5rem;
-  color: var(--gold-accent);
+.parents-label {
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* Timer Display */
+.parents-names {
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Countdown Timer */
 .timer-container {
   display: flex;
   justify-content: space-between;
@@ -220,7 +213,7 @@ section {
   font-family: 'Cinzel', serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--gold-accent);
+  color: var(--gold-primary);
   display: block;
 }
 
@@ -283,17 +276,17 @@ section {
 
 .map-btn {
   background-color: transparent;
-  color: var(--gold-accent);
-  border: 1px solid var(--gold-accent);
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-primary);
 }
 
 .map-btn:hover {
-  background-color: var(--gold-accent);
+  background-color: var(--gold-primary);
   color: var(--maroon-dark);
 }
 
 .rsvp-btn {
-  background: linear-gradient(135deg, var(--gold-accent), #aa7c11);
+  background: linear-gradient(135deg, var(--gold-primary), #aa7c11);
   color: #1a0306;
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
@@ -315,8 +308,8 @@ section {
   top: 20px;
   right: 20px;
   z-index: 999;
-  background: rgba(45, 8, 14, 0.85);
-  border: 1px solid var(--gold-accent);
+  background: rgba(35, 6, 12, 0.85);
+  border: 1px solid var(--gold-primary);
   font-size: 1.2rem;
   padding: 12px;
   border-radius: 50%;
