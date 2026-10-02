@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const musicIcon = document.getElementById("musicIcon");
   let isPlaying = false;
 
-  // Set Wedding Date for Countdown
+  // Set Target Date for Countdown
   const weddingDate = new Date("December 12, 2026 18:00:00").getTime();
 
-  // Open Invitation Event
+  // Open Invitation Button Action
   openBtn.addEventListener("click", function () {
     mainContent.classList.remove("hidden");
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isPlaying = true;
         if (musicIcon) musicIcon.textContent = "🎵";
       }).catch((error) => {
-        console.log("Autoplay restriction prevented audio: ", error);
+        console.log("Autoplay blocked by browser settings: ", error);
       });
     }
   });
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Countdown Timer Script
+  // Live Countdown Script
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = weddingDate - now;
