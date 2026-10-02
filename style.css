@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #0f0f0f;
@@ -88,7 +92,7 @@ body {
   display: none !important;
 }
 
-/* Sections Styling */
+/* Page Sections & Scroll Layout */
 section {
   min-height: 100vh;
   display: flex;
@@ -106,7 +110,7 @@ section {
   background-attachment: fixed;
 }
 
-/* Glassmorphism Containers */
+/* Glass Cards */
 .glass-box {
   background: rgba(255, 255, 255, 0.88);
   padding: 45px 30px;
@@ -203,7 +207,7 @@ h2 {
   margin-top: 5px;
 }
 
-/* Event Details & Buttons */
+/* Venue Details & Buttons */
 .detail-item {
   display: flex;
   align-items: center;
@@ -256,7 +260,7 @@ h2 {
   background-color: #6f451f;
 }
 
-/* Floating Music Control */
+/* Music Control Button */
 .music-btn {
   position: fixed;
   top: 20px;
