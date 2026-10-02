@@ -1,128 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invitation | Jaze & Thahi</title>
-  
-  <!-- Google Fonts for typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+  --maroon-bg: #4a0e17;
+  --maroon-dark: #2d080e;
+  --gold-accent: #d4af37;
+  --gold-light: #f3e5ab;
+  --text-light: #fffdfa;
+  --glass-bg: rgba(45, 8, 14, 0.75);
+  --glass-border: rgba(212, 175, 55, 0.35);
+}
 
-  <!-- Cover Screen / Envelope -->
-  <div id="coverPage" class="cover-page">
-    <div class="glass-box cover-card">
-      <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-      <p class="invite-subtitle">WE ARE GETTING MARRIED</p>
-      <h1 class="cover-names">Jaze & Thahi</h1>
-      <p class="invite-title">You are cordially invited to celebrate our wedding</p>
-      <button id="openBtn" class="open-btn">Open Invitation ✨</button>
-    </div>
-  </div>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- Main Website Content -->
-  <div id="mainContent" class="main-content hidden">
-    
-    <!-- Floating Audio Control -->
-    <button id="musicToggle" class="music-btn" aria-label="Toggle Music">
-      <span id="musicIcon">🎵</span>
-    </button>
-    <audio id="bgMusic" loop preload="auto">
-      <source src="music.mp3" type="audio/mpeg">
-    </audio>
+html {
+  scroll-behavior: smooth;
+}
 
-    <!-- Section 1: Hero -->
-    <section class="hero-section">
-      <div class="glass-box">
-        <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-        <p class="sub-heading">THE WEDDING OF</p>
-        <h1 class="couple-title">Jaze <span class="amp">&</span> Thahi</h1>
-        <p class="quote">"And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them..."</p>
-        <p class="surah-tag">- Surah Ar-Rum (30:21)</p>
-        <div class="scroll-arrow">↓ Scroll Down ↓</div>
-      </div>
-    </section>
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--maroon-dark);
+  color: var(--text-light);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-    <!-- Section 2: Couple Intro -->
-    <section class="couple-section">
-      <div class="glass-box">
-        <h2 class="section-title">The Bride & Groom</h2>
-        <div class="couple-details">
-          <div class="person-card">
-            <h3 class="person-name">Jaze</h3>
-            <p class="person-role">Daughter of Mr. & Mrs. Family Name</p>
-          </div>
-          <div class="divider-icon">💍</div>
-          <div class="person-card">
-            <h3 class="person-name">Thahi</h3>
-            <p class="person-role">Son of Mr. & Mrs. Family Name</p>
-          </div>
-        </div>
-      </div>
-    </section>
+/* Cover Overlay with Rich Deep Maroon Radial Gradient */
+.cover-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, var(--maroon-bg) 0%, var(--maroon-dark) 100%), url('./bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
 
-    <!-- Section 3: Countdown -->
-    <section class="countdown-section">
-      <div class="glass-box">
-        <h2 class="section-title">Counting Down To Our Special Day</h2>
-        <div id="timer" class="timer-container">
-          <div class="time-box"><span id="days">00</span><p>Days</p></div>
-          <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
-          <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
-          <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
-        </div>
-      </div>
-    </section>
+/* Glass Card Styling */
+.glass-box {
+  background: var(--glass-bg);
+  padding: 45px 28px;
+  border-radius: 20px;
+  max-width: 520px;
+  width: 90%;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: 0 auto;
+  text-align: center;
+}
 
-    <!-- Section 4: Event Schedule & Venue Details -->
-    <section class="event-section">
-      <div class="glass-box">
-        <h2 class="section-title">Event & Location Details</h2>
-        <div class="detail-row">
-          <span class="icon">📅</span>
-          <div>
-            <p class="detail-label">Date</p>
-            <p class="detail-value">Saturday, December 12, 2026</p>
-          </div>
-        </div>
-        <div class="detail-row">
-          <span class="icon">⏰</span>
-          <div>
-            <p class="detail-label">Time</p>
-            <p class="detail-value">6:00 PM Onwards</p>
-          </div>
-        </div>
-        <div class="detail-row">
-          <span class="icon">📍</span>
-          <div>
-            <p class="detail-label">Venue</p>
-            <p class="detail-value">Grand Palace Venue, City Center</p>
-          </div>
-        </div>
+.bismillah {
+  font-family: 'Amiri', serif;
+  font-size: 1.6rem;
+  color: var(--gold-accent);
+  margin-bottom: 12px;
+}
 
-        <div class="action-buttons">
-          <a href="https://maps.google.com" target="_blank" class="map-btn">📍 Get Directions (Google Maps)</a>
-          <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">💌 Confirm RSVP</a>
-        </div>
-      </div>
-    </section>
+.invite-subtitle, .sub-heading {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
 
-    <!-- Section 5: Best Wishes / Closing -->
-    <section class="closing-section">
-      <div class="glass-box">
-        <h2 class="section-title">Your Presence Is Our Blessing</h2>
-        <p class="closing-text">We look forward to celebrating this joyful milestone with you and your family.</p>
-        <h3 class="signature-names">Jaze & Thahi</h3>
-      </div>
-    </section>
+.cover-names, .couple-title, .signature-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.6rem;
+  color: var(--gold-accent);
+  margin: 10px 0 15px;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
 
-  </div>
+.couple-title .amp {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--gold-light);
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.invite-title {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.open-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  background: linear-gradient(135deg, var(--gold-accent), #aa7c11);
+  color: #1a0306;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.open-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.55);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Long Scroll Section Setup */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle, var(--maroon-bg) 0%, var(--maroon-dark) 100%), url('./bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: var(--gold-accent);
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+}
+
+.quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #f0f0f0;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.surah-tag {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  margin-bottom: 25px;
+}
+
+.scroll-arrow {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  animation: bounce 2s infinite;
+  margin-top: 15px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+/* Couple Cards */
+.couple-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.person-card {
+  padding: 10px;
+}
+
+.person-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  color: var(--gold-accent);
+}
+
+.person-role {
+  font-size: 0.85rem;
+  color: #d0d0d0;
+  margin-top: 4px;
+}
+
+.divider-icon {
+  font-size: 1.5rem;
+  color: var(--gold-accent);
+}
+
+/* Timer Display */
+.timer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.time-box {
+  background: rgba(212, 175, 55, 0.08);
+  padding: 16px 8px;
+  border-radius: 12px;
+  flex: 1;
+  border: 1px solid var(--glass-border);
+}
+
+.time-box span {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  display: block;
+}
+
+.time-box p {
+  font-size: 0.7rem;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+/* Event Detail Rows */
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 15px;
+  margin: 18px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+
+.detail-row .icon {
+  font-size: 1.5rem;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.map-btn, .rsvp-btn {
+  display: block;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.map-btn {
+  background-color: transparent;
+  color: var(--gold-accent);
+  border: 1px solid var(--gold-accent);
+}
+
+.map-btn:hover {
+  background-color: var(--gold-accent);
+  color: var(--maroon-dark);
+}
+
+.rsvp-btn {
+  background: linear-gradient(135deg, var(--gold-accent), #aa7c11);
+  color: #1a0306;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.rsvp-btn:hover {
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.closing-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Floating Music Control Button */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: rgba(45, 8, 14, 0.85);
+  border: 1px solid var(--gold-accent);
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
