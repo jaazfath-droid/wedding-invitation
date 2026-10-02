@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const musicIcon = document.getElementById("musicIcon");
   let isPlaying = false;
 
-  // Updated Wedding Date: November 29, 2026 at 11:30 AM
+  // Wedding Date: November 29, 2026 at 11:30 AM
   const weddingDate = new Date("November 29, 2026 11:30:00").getTime();
 
   // Open Invitation Action
