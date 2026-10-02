@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const musicIcon = document.getElementById("musicIcon");
   let isPlaying = false;
 
-  // Set Target Date for Countdown
+  // Set Wedding Date for Countdown
   const weddingDate = new Date("December 12, 2026 18:00:00").getTime();
 
-  // Open Invitation Button Action
+  // Open Invitation Action
   openBtn.addEventListener("click", function () {
     mainContent.classList.remove("hidden");
 
@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
         isPlaying = true;
         if (musicIcon) musicIcon.textContent = "🎵";
       }).catch((error) => {
-        console.log("Autoplay blocked by browser settings: ", error);
+        console.log("Autoplay restricted by browser: ", error);
       });
     }
   });
 
-  // Music Toggle Control
+  // Toggle Music Play/Pause
   if (musicBtn && audio) {
     musicBtn.addEventListener("click", function () {
       if (isPlaying) {
@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Live Countdown Script
+  // Live Countdown Routine
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
     if (distance < 0) {
-      document.getElementById("timer").innerHTML = "<h3>The Special Day Has Arrived!</h3>";
+      document.getElementById("timer").innerHTML = "<h3 style='color:var(--gold-accent)'>The Wedding Day Has Arrived!</h3>";
       return;
     }
 
