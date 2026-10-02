@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const distance = weddingDate - now;
 
     if (distance < 0) {
-      document.getElementById("timer").innerHTML = "<h3 style='color:var(--gold-accent)'>The Wedding Day Has Arrived!</h3>";
+      document.getElementById("timer").innerHTML = "<h3 style='color:var(--gold-primary)'>The Wedding Day Has Arrived!</h3>";
       return;
     }
 
