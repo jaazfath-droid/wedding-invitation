@@ -27,7 +27,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Cover Overlay - Pure Maroon Background Gradient */
+/* Cover Overlay */
 .cover-page {
   position: fixed;
   top: 0;
@@ -118,7 +118,7 @@ body {
   display: none !important;
 }
 
-/* Page Scroll Sections - Pure Maroon Background Gradient */
+/* Page Scroll Sections */
 .scroll-section {
   min-height: 100vh;
   display: flex;
