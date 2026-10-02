@@ -1,277 +1,128 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation | Jaze & Thahi</title>
+  
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-html {
-  scroll-behavior: smooth;
-}
+  <!-- Cover Screen / Envelope -->
+  <div id="coverPage" class="cover-page">
+    <div class="glass-box cover-card">
+      <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="invite-subtitle">WE ARE GETTING MARRIED</p>
+      <h1 class="cover-names">Jaze & Thahi</h1>
+      <p class="invite-title">You are cordially invited to celebrate our wedding</p>
+      <button id="openBtn" class="open-btn">Open Invitation ✨</button>
+    </div>
+  </div>
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #0f0f0f;
-  color: #2c2c2c;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+  <!-- Main Website Content -->
+  <div id="mainContent" class="main-content hidden">
+    
+    <!-- Floating Audio Control -->
+    <button id="musicToggle" class="music-btn" aria-label="Toggle Music">
+      <span id="musicIcon">🎵</span>
+    </button>
+    <audio id="bgMusic" loop preload="auto">
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
-/* Cover Overlay */
-.cover-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url('./bg1.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
+    <!-- Section 1: Hero -->
+    <section class="hero-section">
+      <div class="glass-box">
+        <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+        <p class="sub-heading">THE WEDDING OF</p>
+        <h1 class="couple-title">Jaze <span class="amp">&</span> Thahi</h1>
+        <p class="quote">"And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them..."</p>
+        <p class="surah-tag">- Surah Ar-Rum (30:21)</p>
+        <div class="scroll-arrow">↓ Scroll Down ↓</div>
+      </div>
+    </section>
 
-.cover-card {
-  text-align: center;
-}
+    <!-- Section 2: Couple Intro -->
+    <section class="couple-section">
+      <div class="glass-box">
+        <h2 class="section-title">The Bride & Groom</h2>
+        <div class="couple-details">
+          <div class="person-card">
+            <h3 class="person-name">Jaze</h3>
+            <p class="person-role">Daughter of Mr. & Mrs. Family Name</p>
+          </div>
+          <div class="divider-icon">💍</div>
+          <div class="person-card">
+            <h3 class="person-name">Thahi</h3>
+            <p class="person-role">Son of Mr. & Mrs. Family Name</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.bismillah, .arabic-text {
-  font-size: 1.3rem;
-  color: #8b5a2b;
-  margin-bottom: 12px;
-  direction: rtl;
-}
+    <!-- Section 3: Countdown -->
+    <section class="countdown-section">
+      <div class="glass-box">
+        <h2 class="section-title">Counting Down To Our Special Day</h2>
+        <div id="timer" class="timer-container">
+          <div class="time-box"><span id="days">00</span><p>Days</p></div>
+          <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+          <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
+          <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+      </div>
+    </section>
 
-.invite-subtitle {
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  color: #777;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
+    <!-- Section 4: Event Schedule & Venue Details -->
+    <section class="event-section">
+      <div class="glass-box">
+        <h2 class="section-title">Event & Location Details</h2>
+        <div class="detail-row">
+          <span class="icon">📅</span>
+          <div>
+            <p class="detail-label">Date</p>
+            <p class="detail-value">Saturday, December 12, 2026</p>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="icon">⏰</span>
+          <div>
+            <p class="detail-label">Time</p>
+            <p class="detail-value">6:00 PM Onwards</p>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="icon">📍</span>
+          <div>
+            <p class="detail-label">Venue</p>
+            <p class="detail-value">Grand Palace Venue, City Center</p>
+          </div>
+        </div>
 
-.cover-names {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3.2rem;
-  color: #8b5a2b;
-  margin: 10px 0 15px;
-  font-weight: 400;
-}
+        <div class="action-buttons">
+          <a href="https://maps.google.com" target="_blank" class="map-btn">📍 Get Directions (Google Maps)</a>
+          <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">💌 Confirm RSVP</a>
+        </div>
+      </div>
+    </section>
 
-.invite-title {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-}
+    <!-- Section 5: Best Wishes / Closing -->
+    <section class="closing-section">
+      <div class="glass-box">
+        <h2 class="section-title">Your Presence Is Our Blessing</h2>
+        <p class="closing-text">We look forward to celebrating this joyful milestone with you and your family.</p>
+        <h3 class="signature-names">Jaze & Thahi</h3>
+      </div>
+    </section>
 
-.open-btn {
-  display: inline-block;
-  padding: 14px 36px;
-  background: linear-gradient(135deg, #d4af37, #aa7c11);
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-  transition: all 0.3s ease;
-}
+  </div>
 
-.open-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* Page Sections & Scroll Layout */
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero, .countdown-section, .venue-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./bg1.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Glass Cards */
-.glass-box {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 45px 30px;
-  border-radius: 20px;
-  max-width: 520px;
-  width: 92%;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  margin: 10px auto;
-}
-
-.sub-heading {
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  color: #888;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
-.couple-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3.8rem;
-  color: #8b5a2b;
-  margin: 10px 0 18px;
-  font-weight: 400;
-}
-
-.couple-title .amp {
-  font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
-  color: #aa7c11;
-}
-
-h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.6rem;
-  color: #8b5a2b;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-}
-
-.quote {
-  font-size: 1rem;
-  font-style: italic;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.surah-tag {
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 25px;
-  font-weight: 500;
-}
-
-.scroll-hint {
-  font-size: 0.85rem;
-  color: #888;
-  letter-spacing: 1px;
-}
-
-/* Timer Display */
-.timer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.time-box {
-  background: rgba(139, 90, 43, 0.08);
-  padding: 16px 8px;
-  border-radius: 12px;
-  flex: 1;
-  border: 1px solid rgba(139, 90, 43, 0.15);
-}
-
-.time-box span {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #8b5a2b;
-  display: block;
-}
-
-.time-box p {
-  font-size: 0.7rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 5px;
-}
-
-/* Venue Details & Buttons */
-.detail-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 14px 0;
-  font-size: 1.05rem;
-  color: #333;
-}
-
-.detail-item .icon {
-  font-size: 1.2rem;
-}
-
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.location-btn, .rsvp-btn {
-  display: block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.location-btn {
-  background-color: transparent;
-  color: #8b5a2b;
-  border: 2px solid #8b5a2b;
-}
-
-.location-btn:hover {
-  background-color: #8b5a2b;
-  color: #fff;
-}
-
-.rsvp-btn {
-  background-color: #8b5a2b;
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(139, 90, 43, 0.3);
-}
-
-.rsvp-btn:hover {
-  background-color: #6f451f;
-}
-
-/* Music Control Button */
-.music-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  font-size: 1.3rem;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-}
+  <script src="script.js"></script>
+</body>
+</html>
