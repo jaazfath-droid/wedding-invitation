@@ -1,26 +1,26 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding  Invitation | Jaze & Thahi</title>
+  <title>Wedding Invitation | Jaze & Thahi</title>
   
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link href="[https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap)" rel="stylesheet">
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Cover Screen Overlay -->
+  <!-- Cover Screen / Envelope -->
   <div id="coverPage" class="cover-page">
     <div class="glass-box cover-card">
       <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
       <p class="invite-subtitle">WE ARE GETTING MARRIED</p>
       <h1 class="cover-names">Jaze & Thahi</h1>
-      <p class="invite-title">You are cordially invited</p>
+      <p class="invite-title">You are cordially invited to celebrate our wedding</p>
       <button id="openBtn" class="open-btn">Open Invitation ✨</button>
     </div>
   </div>
@@ -28,7 +28,7 @@
   <!-- Main Website Content -->
   <div id="mainContent" class="main-content hidden">
     
-    <!-- Audio Toggle Button -->
+    <!-- Floating Audio Control -->
     <button id="musicToggle" class="music-btn" aria-label="Toggle Music">
       <span id="musicIcon">🎵</span>
     </button>
@@ -36,22 +36,40 @@
       <source src="music.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="glass-box hero-card">
-        <p class="arabic-text">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <!-- Section 1: Hero -->
+    <section class="hero-section">
+      <div class="glass-box">
+        <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
         <p class="sub-heading">THE WEDDING OF</p>
         <h1 class="couple-title">Jaze <span class="amp">&</span> Thahi</h1>
         <p class="quote">"And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them..."</p>
-        <p class="surah-tag">- Surah Ar-Rum 30:21</p>
-        <p class="scroll-hint">↓ Scroll down ↓</p>
+        <p class="surah-tag">- Surah Ar-Rum (30:21)</p>
+        <div class="scroll-arrow">↓ Scroll Down ↓</div>
       </div>
     </section>
 
-    <!-- Countdown Section -->
+    <!-- Section 2: Couple Intro -->
+    <section class="couple-section">
+      <div class="glass-box">
+        <h2 class="section-title">The Bride & Groom</h2>
+        <div class="couple-details">
+          <div class="person-card">
+            <h3 class="person-name">Jaze</h3>
+            <p class="person-role">Daughter of Mr. & Mrs. Family Name</p>
+          </div>
+          <div class="divider-icon">💍</div>
+          <div class="person-card">
+            <h3 class="person-name">Thahi</h3>
+            <p class="person-role">Son of Mr. & Mrs. Family Name</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Countdown -->
     <section class="countdown-section">
       <div class="glass-box">
-        <h2>Counting Down To The Special Day</h2>
+        <h2 class="section-title">Counting Down To Our Special Day</h2>
         <div id="timer" class="timer-container">
           <div class="time-box"><span id="days">00</span><p>Days</p></div>
           <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
@@ -61,27 +79,45 @@
       </div>
     </section>
 
-    <!-- Venue & Event Details Section -->
-    <section class="venue-section">
+    <!-- Section 4: Event Schedule & Venue Details -->
+    <section class="event-section">
       <div class="glass-box">
-        <h2>Event Details</h2>
-        <div class="detail-item">
+        <h2 class="section-title">Event & Location Details</h2>
+        <div class="detail-row">
           <span class="icon">📅</span>
-          <p class="event-date">Saturday, December 12, 2026</p>
+          <div>
+            <p class="detail-label">Date</p>
+            <p class="detail-value">Saturday, December 12, 2026</p>
+          </div>
         </div>
-        <div class="detail-item">
+        <div class="detail-row">
           <span class="icon">⏰</span>
-          <p class="event-time">Reception: 6:00 PM Onwards</p>
+          <div>
+            <p class="detail-label">Time</p>
+            <p class="detail-value">6:00 PM Onwards</p>
+          </div>
         </div>
-        <div class="detail-item">
+        <div class="detail-row">
           <span class="icon">📍</span>
-          <p class="event-venue">Grand Palace Venue, City Center</p>
+          <div>
+            <p class="detail-label">Venue</p>
+            <p class="detail-value">Grand Palace Venue, City Center</p>
+          </div>
         </div>
 
         <div class="action-buttons">
-          <a href="[https://maps.google.com](https://maps.google.com)" target="_blank" class="location-btn">📍 View Location Map</a>
-          <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">💌 RSVP Now</a>
+          <a href="https://maps.google.com" target="_blank" class="map-btn">📍 Get Directions (Google Maps)</a>
+          <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">💌 Confirm RSVP</a>
         </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Best Wishes / Closing -->
+    <section class="closing-section">
+      <div class="glass-box">
+        <h2 class="section-title">Your Presence Is Our Blessing</h2>
+        <p class="closing-text">We look forward to celebrating this joyful milestone with you and your family.</p>
+        <h3 class="signature-names">Jaze & Thahi</h3>
       </div>
     </section>
 
