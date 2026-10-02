@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invitation</title>
+  <title>Wedding Invitation | Jaze & Thahi</title>
+  
+  <!-- Elegant Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,33 +17,41 @@
   <!-- Cover Page Overlay -->
   <div id="coverPage" class="cover-page">
     <div class="glass-box cover-card">
-      <p class="invite-title">Your invitation is ready</p>
-      <button id="openBtn" class="open-btn">Open Invitation</button>
+      <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="invite-subtitle">WE ARE GETTING MARRIED</p>
+      <h1 class="cover-names">Jaze & Thahi</h1>
+      <p class="invite-title">You are cordially invited</p>
+      <button id="openBtn" class="open-btn">Open Invitation ✨</button>
     </div>
   </div>
 
-  <!-- Main Website Content (3 Pages/Sections) -->
+  <!-- Main Content Container -->
   <div id="mainContent" class="main-content hidden">
     
-    <!-- Audio Player & Floating Control Button -->
-    <button id="musicToggle" class="music-btn" aria-label="Toggle Music">🎵</button>
+    <!-- Audio Control Button -->
+    <button id="musicToggle" class="music-btn" aria-label="Toggle Audio">
+      <span id="musicIcon">🎵</span>
+    </button>
     <audio id="bgMusic" loop preload="auto">
       <source src="music.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Page 1: Bride & Groom Names & Quote -->
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="glass-box">
-        <h1>Sarah & Alex</h1>
-        <p class="quote">"Two Souls, One Journey"</p>
-        <p class="scroll-hint">↓ Scroll down ↓</p>
+      <div class="glass-box hero-card">
+        <p class="arabic-text">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+        <p class="sub-heading">THE WEDDING OF</p>
+        <h1 class="couple-title">Jaze <span class="amp">&</span> Thahi</h1>
+        <p class="quote">"And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them..."</p>
+        <p class="surah-tag">- Surah Ar-Rum 30:21</p>
+        <p class="scroll-hint">↓ Scroll to view invitation details ↓</p>
       </div>
     </section>
 
-    <!-- Page 2: Countdown Timer -->
+    <!-- Countdown Section -->
     <section class="countdown-section">
       <div class="glass-box">
-        <h2>Counting Down To Our Special Day</h2>
+        <h2>Counting Down To The Big Day</h2>
         <div id="timer" class="timer-container">
           <div class="time-box"><span id="days">00</span><p>Days</p></div>
           <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
@@ -47,14 +61,27 @@
       </div>
     </section>
 
-    <!-- Page 3: Venue & Details -->
+    <!-- Event & Venue Details Section -->
     <section class="venue-section">
       <div class="glass-box">
-        <h2>Wedding Venue & Details</h2>
-        <p class="event-date">📅 Saturday, December 12, 2026</p>
-        <p class="event-venue">📍 Grand Palace Venue, City Center</p>
-        <p class="event-time">⏰ Reception: 6:00 PM Onwards</p>
-        <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">RSVP Now</a>
+        <h2>Event Details</h2>
+        <div class="detail-item">
+          <span class="icon">📅</span>
+          <p class="event-date">Saturday, December 12, 2026</p>
+        </div>
+        <div class="detail-item">
+          <span class="icon">⏰</span>
+          <p class="event-time">Reception: 6:00 PM Onwards</p>
+        </div>
+        <div class="detail-item">
+          <span class="icon">📍</span>
+          <p class="event-venue">Grand Palace Venue, City Center</p>
+        </div>
+
+        <div class="action-buttons">
+          <a href="https://maps.google.com" target="_blank" class="location-btn">📍 View Location Map</a>
+          <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="rsvp-btn">💌 Send RSVP</a>
+        </div>
       </div>
     </section>
 
